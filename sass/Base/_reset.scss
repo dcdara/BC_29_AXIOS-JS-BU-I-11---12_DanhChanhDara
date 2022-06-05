@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    list-style: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

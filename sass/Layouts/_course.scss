@@ -1,0 +1,124 @@
+#course {
+    position: relative;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    @include responsive(lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include responsive(xs) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .course__content {
+        padding: 60px 100px 40px 100px;
+        @include responsive(sm){
+            padding: 0; 
+        }
+        .course__left {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .course__right {
+            padding-left: 20px;
+            @include responsive(sm){
+                padding-top: 30px; 
+            }
+            .course__form {
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 30px 30px -10px #00000033;
+                background-color: $color-white-3
+            }
+
+            .course__title {
+                @include styleText($fs-3, $color-dark-5, $fw-2);
+                margin-bottom: 50px;
+                @include responsive(xs){
+                    font-size: $fs-2;
+                }
+            }
+
+            .form-control {
+                border: 1px solid #0000001a;
+                border-radius: 50px;
+                font-size: $fs-6;
+                padding-left: 40px;
+                height: 40px;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .icon__name {
+                position: relative;
+
+                .fa-user {
+                    position: absolute;
+                    top: 13px;
+                    left: 15px;
+                    font-size: $fs-1;
+                }
+            }
+
+            .icon__email {
+                position: relative;
+
+                .fa-envelope {
+                    position: absolute;
+                    top: 13px;
+                    left: 15px;
+                    font-size: $fs-1;
+                }
+            }
+
+            .icon__language {
+                position: relative;
+
+                .fa-graduation-cap {
+                    position: absolute;
+                    top: 5px;
+                    left: 15px;
+                    font-size: $fs-1;
+                }
+            }
+
+            .icon__message {
+                position: relative;
+
+                .fa-comment-alt {
+                    position: absolute;
+                    top: 13px;
+                    left: 15px;
+                    font-size: $fs-1;
+                }
+            }
+
+            .course__message {
+                height: 90px;
+                border-radius: 20px;
+                padding-top: 10px;
+            }
+        }
+
+        .bg__image--course {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+
+            .image__course {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}

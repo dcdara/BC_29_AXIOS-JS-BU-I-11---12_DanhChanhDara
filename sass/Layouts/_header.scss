@@ -1,0 +1,199 @@
+header {
+
+    //Header main
+    .header__nav {
+        padding-left: 150px;
+        padding-right: 150px;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        transform: translateY(0);
+        transition: transform 200ms ease;
+
+        @include responsive(lg) {
+            position: relative;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .navbar-brand {
+            .logo {
+                width: 80px;
+                height: auto;
+
+                @include responsive(lg) {
+                    height: 45px;
+                    width: 50px;
+                }
+            }
+        }
+
+        .navbar {
+            padding: 0;
+            .navbar-collapse {
+                @include responsive(lg) {
+                    background-color: $color-white-3;
+                    width: 100%;
+                    height: 100vh;
+                    margin-top: -5px;
+                }
+            }
+
+            .navbar-nav {
+
+                .nav-item {
+                    padding-right: 40px;
+                    position: relative;
+
+                    .nav-link {
+                        @include styleText($fs-1, $color-dark-1, $fw-2 );
+                        line-height: 60px;
+                        transition: all 0.2s;
+
+                        @include responsive(lg) {
+                            padding-top: 0;
+                        }
+                    }
+
+                    &:hover {
+
+                        .nav-link {
+                            color: $color-blue-1  !important;
+                        }
+
+                        &::after {
+
+                            transform: scale(1);
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    &::after {
+                        background-color: $color-blue-1;
+                        position: absolute;
+                        content: "";
+                        left: 20px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        display: block;
+                        transform: scale(0);
+                        transition: all 0.5s;
+
+                        @include responsive(lg) {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                .active {
+                    .nav-link {
+                        color: $color-dark-1  !important;
+                    }
+
+                    &::after {
+                        transform: scale(1);
+                    }
+
+                }
+            }
+
+            .phone__navbar {
+                @include responsive(lg) {
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                }
+            }
+
+            .socials__navbar {
+                @include responsive(lg) {
+                    padding-left: 20px;
+                    padding-bottom: 20px;
+
+                }
+            }
+        }
+
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transform: translateY(-100%);
+
+    }
+
+    // Header sub
+
+    .header__nav--1 {
+        background-color: $color-white-3;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        box-shadow: 0 0 10px 0 #cccccc80;
+        transition: transform 200ms ease;
+
+        .navbar-brand {
+            display: none;
+
+            @include responsive(lg) {
+                display: block;
+            }
+        }
+
+        .navbar {
+            height: 50px;
+        }
+
+        .navbar-nav {
+            .nav-item {
+                padding-right: 40px;
+                position: relative;
+
+                @include responsive(lg) {
+                    padding-left: 20px;
+
+                }
+
+                &::after {
+                    background-color: $color-blue-1;
+                    position: absolute;
+                    content: "";
+                    left: 20px;
+                    top: 60px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    display: block;
+                    transform: scale(0);
+                    transition: all 0.5s;
+
+                    @include responsive(lg) {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+            .active {
+                .nav-link {
+                    color: $color-dark-1  !important;
+                }
+
+                &::after {
+                    transform: scale(1);
+                }
+
+            }
+        }
+    }
+}

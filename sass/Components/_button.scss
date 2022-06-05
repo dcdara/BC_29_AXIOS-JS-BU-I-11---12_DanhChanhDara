@@ -1,0 +1,61 @@
+.btn__callphone {
+    margin-right: 20px;
+    padding: 12px 25px 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3em $color-blue-1 inset;
+    color: $color-white-3;
+    background-color: $color-blue-1;
+    transition: all 300ms ease;
+    font-size: $fs-1;
+
+    &:hover {
+        box-shadow: 0 0 0 1px $color-blue-1 inset;
+        color: $color-blue-1;
+        background-color: white;
+        transition: all 300ms ease;
+    }
+
+    .fa-phone-flip{
+        margin-right: 5px;
+    }
+
+}
+
+.btn{
+    margin-top: 30px;
+    margin-bottom: 73px;
+    padding: 12px 60px 12px 60px;
+    border-radius: 50px;
+}
+
+.btn__course {
+    box-shadow: 0 0 0 3em $color-blue-1 inset;
+    color: $color-white-3;
+    background-color: $color-blue-1;
+    transition: all 300ms ease;
+    font-size: $fs-1;
+
+    &:hover {
+        box-shadow: 0 0 0 1px $color-blue-1 inset;
+        color: $color-blue-1;
+        background-color: white;
+        transition: all 300ms ease;
+    }
+
+}
+
+.btn__footer {
+    box-shadow: 0 0 0 3em $color-white-3 inset;
+    color: $color-dark-5;
+    background-color: $color-white-3;
+    transition: all 300ms ease;
+    font-size: $fs-1;
+
+    &:hover {
+        box-shadow: 0 0 0 1px $color-white-3 inset;
+        color: $color-white-3;
+        background-color: $color-blue-1;
+        transition: all 300ms ease;
+    }
+
+}

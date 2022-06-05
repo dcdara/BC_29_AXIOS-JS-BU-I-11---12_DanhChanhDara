@@ -1,0 +1,76 @@
+#carousel {
+    position: relative;
+
+    .carousel__content {
+        padding-top: 4em;
+        padding-left: 150px;
+        padding-right: 150px;
+
+        @include responsive(lg) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .carousel__left {
+            .title__headline {
+                @include styleText($fs-2, $color-blue-1, $fw-2);
+                line-height: 19.8px;
+                text-align: left;
+            }
+
+            .title__content {
+                @include styleText($fs-4, $color-dark-2, $fw-2);
+                line-height: 68px;
+                text-align: left;
+                @include responsive(md){
+                    font-size: $fs-3;
+                } 
+                @include responsive(xs){
+                    font-size: $fs-3;
+                }
+
+            }
+
+        }
+
+        .carousel__right {
+            .carousel__image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .bg__image--top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        .image__top {
+            height: 200px;
+            width: 100%;
+        @include responsive(lg){
+            height: 110px;
+
+        }
+
+        }
+    }
+
+    .bg__image--center {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        .image__center {
+            height: 150px;
+            width: 100%;
+
+        }
+    }
+
+
+}

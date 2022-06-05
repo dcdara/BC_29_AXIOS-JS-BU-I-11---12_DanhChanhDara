@@ -1,0 +1,21 @@
+.social__header {
+    padding-right: 10px;
+    font-size: $fs-1;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-blue-3;
+        cursor: pointer;
+    }
+}
+
+.social__footer {
+    padding-right: 15px;
+    font-size: $fs-5;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-dark-3;
+        cursor: pointer;
+    }
+}
